@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Profolio - Bootstrap 5 Personal Portfolio &amp; Resume Template For Developers</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Profolio Bootstrap 5 Template">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Fonts -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+	<!-- Bootstrpa Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	
+	<!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+</head> 
+
+
+<body>
+	
+	<div class="container-fluid">
+
+	
+			<div class="side-panel position-relative">
+				 
+				{% include 'partials/navbar.html'%}	
+			</div><!--//side-panel-->
+			
+			<div class="main-content-wrapper">
+				<div class="container-fluid">
+					<div class="top-bar text-center position-relative">
+						<div class="top-bar-inner">
+							
+							<a class="menu-toggler" data-bs-toggle="offcanvas" href="#offcanvasNavbar" role="button" aria-controls="offcanvasNavbar">
+								 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+								  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+								</svg>
+					        </a>
+					        
+					        <div class="mode-toggle text-center">
+							    
+							    <input class="toggle" id="darkmode" type="checkbox">
+							    <label class="toggle-btn mx-auto mb-0" for="darkmode">
+							        <span class="day-icon toggle-icon"> <i class="bi bi-sun-fill"></i></span>
+							        <span class="night-icon toggle-icon"><i class="bi bi-moon-fill"></i></span>
+							        
+							    </label>
+							    
+							</div><!--//mode-toggle-->
+							
+							<a class="btn btn-primary top-bar-cta" href="{% url 'contact'%}">Hire Me</a>
+					
+							<ul class="social-list list-inline mx-auto d-none d-lg-block">
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li>
+								
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
+								
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-stack-overflow fa-fw"></i></a></li>
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-medium fa-fw"></i></a></li>
+							</ul><!--//social-list-->
+							
+						</div><!--//top-bar-inner-->
+						
+					</div><!--//top-bar-->
+					
+					<section class="page-intro-section section has-profile-image mx-auto ">
+					
+						<div class="profile-holder text-center">
+							<img class="profile-pic rounded-circle" src="{% static 'img/profile.jpg' %}" alt="image">
+						</div><!--//profile-holder-->
+						<div class="intro-holder">
+							<h2 class="intro-name text-center">My Projects</h2>
+							<div class="profile-intro text-center limit-max-width mx-auto">
+							    <p class="mb-4">Welcome to my projects gallery! Here, you'll find a showcase of my best work. From mobile apps to websites, each project reflects my dedication to crafting user-friendly and innovative digital solutions. Take a look around and see how I turn ideas into reality!</p>
+							    <div class="text-center mt-4">
+								    <a class="btn btn-secondary" href="{% url 'contact'%}">Start A Conversation <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg></a>
+							    </div><!--//section-cta-->
+							</div>
+							
+						</div><!--//intro-holder-->
+						
+					</section><!--//page-intro-section-->
+					
+			
+                    <section class="projects-section section mx-auto">
+	                    <div class="row justify-content-center gx-lg-5">
+		                    <div class="project-item col-12 col-md-6 col-lg-12 mb-5">
+			                    <div class="project-item-inner row">
+								    <div class="col-12 col-lg-5 col-xl-4">
+								        <img class="project-thumb rounded-2 mb-3 mb-lg-0 rounded mx-auto" src="{% static 'img/expenseApp.jpg' %}" alt="image">
+								    </div>
+								    <div class="col-12 col-lg-7 col-xl-8">
+									    <h3 class="title"><a href="case-study.html">Personal Budget App</a></h3>
+								        <div class="intro mb-3">Our mobile app makes it easy for people to track their daily and monthly expenses. With just a few taps, users can log their spending and keep an eye on their budget. The app helps users set reasonable expenditure goals and provides insights into their spending habits. With features like expense categorization and monthly summaries, staying on top of finances has never been simpler</div>
+								        
+								        <h4 class="subtitle">Tech Stack:</h4>
+								        <ul class="tech-stack list-inline">
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/reacticon.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/firebase.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/redux.png' %}" alt=""></li>
+								        </ul>
+								        
+								        <a class="more-link" href="https://github.com/JosephGMkonda/EaseExpense">View On Github <span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a>
+								    </div><!--//col-->
+			                    </div><!--//project-item-inner-->
+							</div><!--//project-item-->
+							
+							<div class="project-item col-12 col-md-6 col-lg-12 mb-5">
+			                    <div class="project-item-inner row">
+								    <div class="col-12 col-lg-5 col-xl-4">
+								        <img class="project-thumb rounded-2 mb-3 mb-lg-0 rounded mx-auto" src="{% static 'img/Nasfam.png' %}" alt="image">
+								    </div>
+								    <div class="col-12 col-lg-7 col-xl-8">
+									    <h3 class="title"><a href="case-study.html">NasFam Web App</a></h3>
+								        <div class="intro mb-3">Our web app simplifies farm management and rice product tracking. Designed for farmers and agricultural businesses, it streamlines tasks such as crop planning, inventory management, and sales tracking. With intuitive features, users can monitor crop growth, track expenses, and optimize yields. Additionally, the app enables efficient management of rice products from cultivation to sale, ensuring transparency and profitability throughout the process</div>
+								        
+								        <h4 class="subtitle">Tech Stack:</h4>
+								        
+								        <ul class="tech-stack list-inline">
+                                            <li class="list-inline-item"><img class="rounded" src="{% static 'img/reacticon.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/Mongodb.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/redux.png' %}" alt=""></li>
+								        </ul>
+								        
+								        <a class="more-link" href="https://github.com/JosephGMkonda/Nasfam">View On Github <span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a>
+								    </div><!--//col-->
+			                    </div><!--//project-item-inner-->
+							</div><!--//project-item-->
+		                    <div class="project-item col-12 col-md-6 col-lg-12 mb-5">
+			                    <div class="project-item-inner row">
+								    <div class="col-12 col-lg-5 col-xl-4">
+								        <img class="project-thumb rounded-2 mb-3 mb-lg-0 rounded mx-auto" src="{% static 'img/homepage.png'%}" alt="image">
+								    </div>
+								    <div class="col-12 col-lg-7 col-xl-8">
+									    <h3 class="title"><a href="case-study.html">InstaFreak Web App</a></h3>
+								        <div class="intro mb-3">Introducing our innovative social media platform, designed to connect people worldwide. With a focus on user engagement and community building, our platform offers a seamless experience for sharing moments, connecting with friends, and discovering new interests. From personalized feeds to interactive features, users can explore, express, and engage in meaningful conversations. Join our vibrant community and experience social networking like never before</div>
+								        
+								        <h4 class="subtitle">Tech Stack:</h4>
+								        <ul class="tech-stack list-inline">
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/reacticon.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/Mongodb.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/redux.png' %}" alt=""></li>
+								        </ul>
+								        
+								        <a class="more-link" href="https://github.com/JosephGMkonda/Instafreack">View On Github<span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a>
+								    </div><!--//col-->
+							    </div><!--//project-item-inner-->
+							</div><!--//project-item-->
+							
+							<div class="project-item col-12 col-md-6 col-lg-12 mb-5">
+			                    <div class="project-item-inner row">
+								    <div class="col-12 col-lg-5 col-xl-4">
+								        <img class="project-thumb rounded-2 mb-3 mb-lg-0 rounded mx-auto" src="{% static 'img/javacode.png'%}" alt="image">
+								    </div>
+								    <div class="col-12 col-lg-7 col-xl-8">
+									    <h3 class="title"><a href="case-study.html">Cholera managemnt system</a></h3>
+								        <div class="intro mb-3">Our cholera management system is a comprehensive solution designed to streamline the prevention, detection, and response to cholera outbreaks. Leveraging advanced technology and data-driven insights, our system enables healthcare professionals and authorities to efficiently track cases, monitor disease trends, and implement targeted interventions</div>
+								        
+								        <h4 class="subtitle">Tech Stack:</h4>
+								        <ul class="tech-stack list-inline">
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/java.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/mysql.png' %}" alt=""></li>
+									        
+								        </ul>
+								        
+								        <a class="more-link" href="https://github.com/JosephGMkonda/CholeraManagementSystem">View On Github<span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a>
+								    </div><!--//col-->
+							    </div><!--//project-item-inner-->
+							</div><!--//project-item-->
+		                    
+							
+							<div class="project-item col-12 col-md-6 col-lg-12 mb-5">
+			                    <div class="project-item-inner row">
+								    <div class="col-12 col-lg-5 col-xl-4">
+								        <img class="project-thumb rounded-2 mb-3 mb-lg-0 rounded mx-auto" src="{% static 'img/malHood.png' %}" alt="image">
+								    </div>
+								    <div class="col-12 col-lg-7 col-xl-8">
+									    <h3 class="title"><a href="case-study.html">MalHood Web App</a></h3>
+								        <div class="intro mb-3"> Introducing our exclusive web app dedicated to showcasing Malawian cinemas and movies. Designed to celebrate local cinema culture, our platform offers a curated selection of movies playing at cinemas across Malawi. </div>
+								        
+								        <h4 class="subtitle">Tech Stack:</h4>
+								        <ul class="tech-stack list-inline">
+                                            <li class="list-inline-item"><img class="rounded" src="{% static 'img/django.png' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/python.jpg' %}" alt=""></li>
+									        <li class="list-inline-item"><img class="rounded" src="{% static 'img/mysql.png' %}" alt=""></li>
+								        </ul>
+								        
+								        <a class="more-link" href="https://github.com/JosephGMkonda/MalHood-TV">View On Github<span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a>
+								    </div><!--//col-->
+							    </div><!--//project-item-inner-->
+							</div><!--//project-item-->
+	                    </div><!--//row-->
+												
+						
+						
+                    </section><!--//section-->
+                    
+            
+					
+				</div>
+			</div><!--//main-content-wrapper-->
+
+		</div><!--//row-->
+	
+	</div><!--//container-->
+	
+	
+	
+	<!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
+	<div id="config-panel" class="config-panel config-panel-hide d-none d-lg-block">
+		<div class="panel-inner">
+			<a id="config-trigger" class="config-trigger text-center" href="#"><i class="fas fa-cog mx-auto" data-fa-transform="down-6" ></i></a>
+			<h5 class="panel-title">Color Switcher</h5>
+			<ul id="color-options" class="list-inline mb-0">
+				<li class="theme-1 active list-inline-item"><a data-style="assets/css/theme-1.css" href="#"></a></li>
+				<li class="theme-2  list-inline-item"><a data-style="assets/css/theme-2.css" href="#"></a></li>
+				<li class="theme-3  list-inline-item"><a data-style="assets/css/theme-3.css" href="#"></a></li>
+				<li class="theme-4  list-inline-item"><a data-style="assets/css/theme-4.css" href="#"></a></li>
+				<li class="theme-5  list-inline-item"><a data-style="assets/css/theme-5.css" href="#"></a></li>
+				<li class="theme-6  list-inline-item"><a data-style="assets/css/theme-6.css" href="#"></a></li>
+				<li class="theme-7  list-inline-item"><a data-style="assets/css/theme-7.css" href="#"></a></li>
+				<li class="theme-8  list-inline-item"><a data-style="assets/css/theme-8.css" href="#"></a></li>
+			</ul>
+			<a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+		</div><!--//panel-inner-->
+	</div><!--//configure-panel-->
+	
+	
+	
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script> 
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Dark/Light Mode Toggle  -->
+	<script src="assets/plugins/js-cookie.min.js"></script>
+	<script src="assets/js/mode-toggle.js"></script>  
+	
+	<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+	<script src="assets/js/demo/style-switcher.js"></script>
+	
+
+</body>
+
+
+{% endblock %}

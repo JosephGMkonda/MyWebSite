@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+		
+<div class="main-content-wrapper">
+    <div class="container-fluid">
+        <div class="top-bar text-center position-relative">
+            <div class="top-bar-inner">
+                
+                <a class="menu-toggler" data-bs-toggle="offcanvas" href="#offcanvasNavbar" role="button" aria-controls="offcanvasNavbar">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </a>
+                
+                <div class="mode-toggle text-center">
+                    
+                    <input class="toggle" id="darkmode" type="checkbox">
+                    <label class="toggle-btn mx-auto mb-0" for="darkmode">
+                        <span class="day-icon toggle-icon"> <i class="bi bi-sun-fill"></i></span>
+                        <span class="night-icon toggle-icon"><i class="bi bi-moon-fill"></i></span>
+                        
+                    </label>
+                    
+                </div><!--//mode-toggle-->
+                
+                <a class="btn btn-primary top-bar-cta" href="{% url 'contact'%}">Hire Me</a>
+        
+                <ul class="social-list list-inline mx-auto d-none d-lg-block">
+                    <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-twitter fa-fw"></i></a></li>
+                    <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li>
+                    
+                    <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
+                    
+                    <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-stack-overflow fa-fw"></i></a></li>
+                    <li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="#"><i class="fa-brands fa-medium fa-fw"></i></a></li>
+                </ul><!--//social-list-->
+                
+            </div><!--//top-bar-inner-->
+            
+        </div><!--//top-bar-->
+
+        <section class="page-intro-section section has-profile-image mx-auto">
+        
+            <div class="profile-holder text-center">
+                <img class="profile-pic rounded-circle" src="{% static 'img/profile.jpg' %}" alt="image">
+
+            </div><!--//profile-holder-->
+            <div class="intro-holder">
+                <h2 class="intro-name text-center mb-3">Joseph Mkonda</h2>
+                <div class="profile-intro text-md-center limit-max-width mx-auto">
+                    <p>Hi! I’m a Software Developer with more than 3 years of experience working in mobile apps, Web Apps and desktop apps. Welcome to my online portfolio!.</p>   
+                </div>
+            </div><!--//intro-holder-->
+            
+            <div class="section-cta text-center mt-4">
+                <a class="btn btn-secondary theme-btn-cta" href="{% url 'resume'%}">View Resume<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg></a>
+            </div><!--//section-cta-->
+            
+        </section><!--//page-intro-section-->
+        
+        <section class="featured-projects-section section mx-auto">
+            <h3 class="section-heading mb-4">Projects</h3>
+            <div class="section-intro mb-5 limit-max-width mx-auto text-md-center">Hello and welcome! I'm skilled in designing and developing immersive digital experiences. My passion lies in crafting elegant solutions that captivate users and elevate brands.</div>
+            <div class="featured-project-list container">
+                <div class="row justify-content-center gy-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="{% static 'img/expenseApp.jpg'%}" class="card-img-top" alt="image">
+                            <div class="card-body px-0">
+                                <h5 class="card-title"><a href="case-study.html">Personal Budget App</a></h5>
+                                
+                                <div><a class="card-link more-link" href="{% url 'projects'%}">View more <span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a></div>
+                            </div>
+                        </div><!--//card-->
+                    </div><!--//col-->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="{% static 'img/Nasfam.png'%}" class="card-img-top" alt="image">
+                            <div class="card-body px-0">
+                                <h5 class="card-title"><a href="case-study.html">NasFam WebApp</a></h5>
+                                
+                                <div><a class="card-link more-link" href="projects">View more <span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a></div>
+                            </div>
+                        </div><!--//card-->
+                    </div><!--//col-->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="{% static 'img/homepage.png'%}" class="card-img-top" alt="image">
+                            <div class="card-body px-0">
+                                <h5 class="card-title"><a href="case-study.html">InstaFreak (SocialMedia Web) App</a></h5>
+                                
+                                <div><a class="card-link more-link" href="{% url 'projects'%}">View more <span class="link-arrow"><i class="bi bi-arrow-right"></i></span></a></div>
+
+                            </div>
+                        </div><!--//card-->
+                    </div><!--//col-->
+                    
+                </div><!--//row-->
+                <div class="section-cta text-center mt-3">
+                    <a class="btn btn-secondary theme-btn-cta" href="{% url 'projects'%}">More Projects<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg></a>
+                </div><!--//section-cta-->
+            </div><!--//project-list-->
+                
+        </section><!--//projects-section-->
+        
+ 
+<section class="skills-section section mx-auto mb-0">
+            <h3 class="section-heading mb-4">Skills &amp; Experiences</h3>
+           
+            <div class="row tech-list justify-content-center align-items-center">
+                
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/java.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/javascript.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/mongodb.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/mysql.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/python.jpg'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/postgresql.png'%}" alt=""></div>
+
+                <div class="clearfix"></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/reacticon.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/redis.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/springboot.png'%}" alt=""></div>
+                <div class="icon-item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><img class="rounded" src="{% static 'img/django.png'%}" alt=""></div>
+                
+                
+                
+            </div><!--//tech-list-->
+            <div class="section-cta text-center mt-4">
+                <a class="btn btn-secondary theme-btn-cta" href="{% url 'resume'%}">View Resume <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg></a>
+            </div><!--//section-cta-->
+            
+            <div class="skill-blocks py-5 row justify-content-center">
+                <div class="item col-md-6 col-lg-4 text-md-center">
+                    <div class="item-icon-holder mx-md-auto"><i class="item-icon bi bi-terminal"></i></div>
+                    <h3 class="item-title mb-3">Web Development</h3>
+                    <div class="item-desc">
+                        I specialize in web development with expertise in front-end technologies like HTML, CSS, and JavaScript, 
+                        alongside frameworks such as React. My back-end 
+                        proficiency includes Python and Django, Java and SpringBoot and Nodejs. With a keen eye for design and a commitment to staying current with industry trends, I create responsive, user-friendly websites that seamlessly merge form and function.
+                    </div><!--//item-desc-->
+                </div><!--//item-->
+                <div class="item col-md-6 col-lg-4 text-md-center">
+                    <div class="item-icon-holder  mx-md-auto"><i class="item-icon bi bi-database-check"></i></div>
+                    <h3 class="item-title mb-3">Database Infrastructure</h3>
+                    <div class="item-desc">
+                        I specialize in database infrastructure, proficient in designing, optimizing, and administering both relational and non-relational databases. With expertise in MySQL, PostgreSQL, MongoDB, and Redis, I ensure efficient data management and integration with web applications. My focus on scalability and staying updated on emerging technologies enables me to deliver high-performance database solutions.
+                    </div><!--//item-desc-->
+                </div><!--//item-->
+                <div class="item col-md-6 col-lg-4 text-md-center">
+                    <div class="item-icon-holder  mx-md-auto"><i class="item-icon bi bi-infinity"></i></div>
+                    <h3 class="item-title mb-3">DevOps</h3>
+                    <div class="item-desc">
+                        DevOps Specialist: I streamline software delivery pipelines through automation and collaboration, ensuring rapid and reliable deployments while maintaining high-quality standards. 
+                    </div><!--//item-desc-->
+                </div><!--//item-->
+                
+                <div class="item col-md-6 col-lg-4 text-md-center">
+                    <div class="item-icon-holder  mx-md-auto"><i class="item-icon bi bi-android2"></i></div>
+                    <h3 class="item-title mb-3">Android App <br>Development</h3>
+                    <div class="item-desc">
+                        Specializing in Android development, I bring expertise in both native app development using Java and Kotlin, as well as cross-platform solutions with React Native. With a focus on intuitive UI/UX design and efficient performance optimization, I excel in creating responsive mobile applications tailored for diverse screen sizes. Proficient in integrating backend services through RESTful APIs, I ensure seamless functionality and compatibility across Android versions. 
+                    </div><!--//item-desc-->
+                </div><!--//item-->
+            </div><!--//skill-blocks-->
+            <div class="section-cta text-center">
+                <a class="btn btn-secondary theme-btn-cta" href="{% url 'contact'%}">Get In Touch <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg></a>
+            </div><!--//section-cta-->
+        </section><!--//skills-section-->
+        
+    </div>
+</div><!--//main-content-wrapper-->
+
+</div>
+
+{% endblock content%}

@@ -111,6 +111,7 @@ wsproto = "==1.2.0"
 zipp = "==3.17.0"
 "zope.interface" = "==6.2"
 whitenoise = "*"
+wheel = "*"
 
 [dev-packages]
 
